@@ -29,7 +29,7 @@ const Footer = () => {
           <div>
             <h4 className="text-xs font-bold uppercase tracking-widest text-gray-400 mb-4">Horario</h4>
             <ul className="space-y-2 text-sm text-gray-600">
-              <li className="flex justify-between"><span>Lunes - Viernes</span> <span>09:00 - 20:00</span></li>
+              <li className="flex justify-between"><span>Lunes - Viernes</span> <span>09:00 - 21:00</span></li>
               <li className="flex justify-between"><span>Sábado</span> <span>10:00 - 14:00</span></li>
               <li className="flex justify-between text-red-400"><span>Domingo</span> <span>Cerrado</span></li>
             </ul>
@@ -38,9 +38,9 @@ const Footer = () => {
           {/* Columna 4: Ubicación */}
           <div>
             <h4 className="text-xs font-bold uppercase tracking-widest text-gray-400 mb-4">Dónde estamos</h4>
-            <p className="text-sm text-gray-600 mb-2">Calle Salud 123, Planta 1</p>
-            <p className="text-sm text-gray-600 mb-4">28001, Madrid</p>
-            <p className="text-sm font-semibold text-blue-600">+34 912 345 678</p>
+            <p className="text-sm text-gray-600 mb-2">Calle de Serracines 2</p>
+            <p className="text-sm text-gray-600 mb-4">28806, Alcalá de Henares</p>
+            <p className="text-sm font-semibold text-blue-600">+34 918 838 775</p>
           </div>
         </div>
 

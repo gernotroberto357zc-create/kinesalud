@@ -1,4 +1,5 @@
 // app/page.tsx
+import { Navbar } from "@/components/Navbar";
 import { Services } from "@/components/Services";
 import Footer from "@/components/Footer"; // 1. Importamos el nuevo componente
 
@@ -6,6 +7,7 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-white">
       {/* Hero Section: Salud Profesional */}
+      <Navbar />
       <section className="relative pt-44 pb-20 px-6">
         <div className="max-w-5xl mx-auto text-center">
           <span className="inline-block px-4 py-1.5 mb-6 text-xs font-bold tracking-[0.2em] uppercase bg-teal-50 text-clinic-primary rounded-full">

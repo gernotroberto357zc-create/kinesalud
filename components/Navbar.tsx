@@ -3,22 +3,26 @@ import React from 'react';
 
 export const Navbar = () => {
   return (
-    <nav className="fixed top-0 w-full z-50 bg-white/70 backdrop-blur-md border-b border-gray-100">
-      <div className="max-w-6xl mx-auto px-6 h-12 flex items-center justify-between">
+    // Hemos cambiado 'top-0 w-full' por 'top-6 inset-x-0' y añadido 'max-w-5xl mx-auto'
+    <nav className="fixed top-6 inset-x-0 z-50 flex justify-center px-6">
+      <div className="w-full max-w-5xl h-14 px-6 flex items-center justify-between bg-white/70 backdrop-blur-xl border border-white/20 shadow-lg shadow-black/[0.03] rounded-full transition-all duration-300">
+        
         {/* Logo con tipografía de Apple */}
-        <span className="text-apple-text font-bold text-xl tracking-tighter">
-          KineSalud<span className="text-apple-blue">.</span>
-        </span>
-
-        {/* Menú Minimalista */}
-        <div className="hidden md:flex space-x-8 text-[13px] text-apple-text/70 font-medium">
-          <a href="#servicios" className="hover:text-apple-text transition-colors">Tratamientos</a>
-          <a href="#clinica" className="hover:text-apple-text transition-colors">La Clínica</a>
-          <a href="#contacto" className="hover:text-apple-text transition-colors">Contacto</a>
+        <div className="flex items-center gap-1.5 group cursor-pointer">
+          <span className="text-gray-900 font-bold text-xl tracking-tighter">
+            KineSalud<span className="text-clinic-primary">.</span>
+          </span>
         </div>
 
-        {/* Botón redondeado (Squircle) */}
-        <button className="bg-apple-blue text-white px-5 py-1.5 rounded-full text-xs font-semibold hover:bg-[#0077ED] transition-all shadow-sm">
+        {/* Menú Minimalista - Ajustado el tamaño y espaciado */}
+        <div className="hidden md:flex items-center space-x-10 text-[13px] text-gray-500 font-medium tracking-tight">
+          <a href="#servicios" className="hover:text-clinic-primary transition-colors duration-200">Tratamientos</a>
+          <a href="#clinica" className="hover:text-clinic-primary transition-colors duration-200">La Clínica</a>
+          <a href="#contacto" className="hover:text-clinic-primary transition-colors duration-200">Contacto</a>
+        </div>
+
+        {/* Botón redondeado estilo Apple Store */}
+        <button className="bg-clinic-primary text-white px-6 py-2 rounded-full text-[13px] font-semibold hover:bg-teal-700 transition-all shadow-md shadow-teal-900/10 active:scale-95">
           Cita online
         </button>
       </div>
