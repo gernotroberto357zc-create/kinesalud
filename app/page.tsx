@@ -1,18 +1,35 @@
-// app/page.tsx
+"use client"; // <--- ESTO ES VITAL para que las animaciones funcionen
+
+import { motion } from "framer-motion";
 import { Navbar } from "@/components/Navbar";
 import { Services } from "@/components/Services";
 import Footer from "@/components/Footer";
 
 export default function Home() {
+  // Configuración de la animación: Aparece desde abajo (y: 20) y se vuelve opaco
+  const revealVariant = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.8, ease: "easeOut" }
+    }
+  };
+
   return (
     <main className="min-h-screen bg-white">
       <Navbar />
 
-      {/* Hero Section: Salud Profesional */}
+      {/* Hero Section Animada al Cargar */}
       <section className="relative pt-44 pb-20 px-6">
-        <div className="max-w-5xl mx-auto text-center">
+        <motion.div
+          initial="hidden"
+          animate="visible"
+          variants={revealVariant}
+          className="max-w-5xl mx-auto text-center"
+        >
           <span className="inline-block px-4 py-1.5 mb-6 text-xs font-bold tracking-[0.2em] uppercase bg-teal-50 text-clinic-primary rounded-full">
-            Centro de Fisioterapia Avanzada Donde Riki trabaja pero no trabaja...
+            Centro de Fisioterapia Avanzada
           </span>
 
           <h1 className="text-6xl md:text-8xl font-bold tracking-tighter text-clinic-secondary mb-8 leading-tight">
@@ -24,30 +41,43 @@ export default function Home() {
             Especialistas en recuperación funcional y alivio del dolor crónico con tecnología de vanguardia.
           </p>
 
-          {/* Contenedor de botones corregido */}
           <div className="flex flex-col sm:flex-row justify-center items-center gap-6">
-            <a
-              href="https://www.doctoralia.es/clinicas/kine-salud-2"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full sm:w-auto bg-clinic-primary !text-white px-10 py-4 rounded-full font-semibold text-lg hover:bg-teal-700 transition-all shadow-lg shadow-teal-900/10 active:scale-95 text-center flex items-center justify-center"
-            >
-              Solicitar Cita
-            </a>
-            
-            <a 
-              href="#servicios" 
-              className="group !text-clinic-secondary font-semibold text-lg flex items-center gap-2 hover:!text-clinic-primary transition-colors cursor-pointer"
-            >
-              Nuestros Tratamientos
-              <span className="transition-transform group-hover:translate-x-1">→</span>
-            </a>
-          </div>
-        </div>
+  <a
+    href="https://www.doctoralia.es/clinicas/kine-salud-2"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="w-full sm:w-auto px-10 py-4 rounded-full font-bold text-lg transition-all shadow-lg active:scale-95 text-center flex items-center justify-center"
+    style={{ 
+      backgroundColor: '#14b8a6', // Este es el verde Teal sólido
+      color: '#FFFFFF',           // Blanco puro
+      display: 'flex',
+      minWidth: '200px'
+    }} 
+  >
+    Solicitar Cita
+  </a>
+  
+  <a 
+    href="#servicios" 
+    className="font-semibold text-lg flex items-center gap-2 transition-colors cursor-pointer"
+    style={{ color: '#1f2937' }} // Gris muy oscuro casi negro
+  >
+    Nuestros Tratamientos
+    <span>→</span>
+  </a>
+</div>
+        </motion.div>
       </section>
 
-      {/* Bento Grid con fondo suave de clínica */}
-      <section id="servicios" className="bg-clinic-bg py-24 rounded-[48px] mx-4 mb-12">
+      {/* Sección de Servicios con Scroll Reveal (Se activa al bajar) */}
+      <motion.section
+        id="servicios"
+        initial="hidden"
+        whileInView="visible" // <--- Aquí ocurre la magia del scroll
+        viewport={{ once: true, margin: "-100px" }}
+        variants={revealVariant}
+        className="bg-clinic-bg py-24 rounded-[48px] mx-4 mb-12"
+      >
         <div className="max-w-6xl mx-auto px-6">
           <div className="mb-16 flex flex-col md:flex-row md:items-end justify-between gap-6">
             <div>
@@ -62,10 +92,9 @@ export default function Home() {
 
           <Services />
         </div>
-      </section>
+      </motion.section>
 
       <Footer />
-      
     </main>
   );
 }

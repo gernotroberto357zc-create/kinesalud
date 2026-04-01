@@ -23,13 +23,17 @@ export const Navbar = () => {
 
         {/* Enlace a Doctoralia (limpio y sin doble botón) */}
         <a
-          href="https://www.doctoralia.es/clinicas/kine-salud-2"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="bg-clinic-primary text-white px-6 py-2 rounded-full text-[13px] font-semibold hover:bg-teal-700 transition-all shadow-md shadow-teal-900/10 active:scale-95 inline-block text-center"
-        >
-          Cita online
-        </a>
+  href="https://www.doctoralia.es/clinicas/kine-salud-2"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="px-6 py-2 rounded-full text-[13px] font-bold transition-all shadow-md active:scale-95 inline-block text-center"
+  style={{ 
+    backgroundColor: '#14b8a6', // El mismo verde Teal
+    color: '#FFFFFF'            // Blanco puro garantizado
+  }}
+>
+  Cita online
+</a>
       </div>
     </nav>
   );
