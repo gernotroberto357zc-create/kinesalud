@@ -6,7 +6,7 @@ export const Navbar = () => {
     // Hemos cambiado 'top-0 w-full' por 'top-6 inset-x-0' y añadido 'max-w-5xl mx-auto'
     <nav className="fixed top-6 inset-x-0 z-50 flex justify-center px-6">
       <div className="w-full max-w-5xl h-14 px-6 flex items-center justify-between bg-white/70 backdrop-blur-xl border border-white/20 shadow-lg shadow-black/[0.03] rounded-full transition-all duration-300">
-        
+
         {/* Logo con tipografía de Apple */}
         <div className="flex items-center gap-1.5 group cursor-pointer">
           <span className="text-gray-900 font-bold text-xl tracking-tighter">
@@ -23,7 +23,14 @@ export const Navbar = () => {
 
         {/* Botón redondeado estilo Apple Store */}
         <button className="bg-clinic-primary text-white px-6 py-2 rounded-full text-[13px] font-semibold hover:bg-teal-700 transition-all shadow-md shadow-teal-900/10 active:scale-95">
-          Cita online
+          <a
+            href="https://www.doctoralia.es/clinicas/kine-salud-2"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-clinic-primary text-white px-6 py-2 rounded-full text-[13px] font-semibold hover:bg-teal-700 transition-all shadow-md shadow-teal-900/10 active:scale-95 inline-block"
+          >
+            Cita online
+          </a>
         </button>
       </div>
     </nav>
