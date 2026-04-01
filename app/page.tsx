@@ -12,7 +12,7 @@ export default function Home() {
       <section className="relative pt-44 pb-20 px-6">
         <div className="max-w-5xl mx-auto text-center">
           <span className="inline-block px-4 py-1.5 mb-6 text-xs font-bold tracking-[0.2em] uppercase bg-teal-50 text-clinic-primary rounded-full">
-            Centro de Fisioterapia Avanzada
+            Centro de Fisioterapia Avanzada Donde Riki trabaja pero no trabaja...
           </span>
 
           <h1 className="text-6xl md:text-8xl font-bold tracking-tighter text-clinic-secondary mb-8 leading-tight">
