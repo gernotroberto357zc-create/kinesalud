@@ -1,20 +1,25 @@
 "use client";
 
-import { motion } from "framer-motion";
+
 import { Navbar } from "@/components/Navbar";
 import { Services } from "@/components/Services";
 import { Especialistas } from "@/components/Especialistas";
 import { Testimonials } from "@/components/Testimonials";
 import { LocationMap } from "@/components/LocationMap";
 import Footer from "@/components/Footer";
+import { motion, Variants } from "framer-motion";
 
 export default function Home() {
-  const revealVariant = {
+  // 2. Añade ": Variants" aquí. Esto le dice a TS exactamente qué es este objeto.
+  const revealVariant: Variants = {
     hidden: { opacity: 0, y: 30 },
     visible: { 
       opacity: 1, 
       y: 0, 
-      transition: { duration: 0.8, ease: "easeOut" } 
+      transition: { 
+        duration: 0.8, 
+        ease: "easeOut" // Ahora TS ya sabe que este string es un "Easing" válido
+      } 
     }
   };
 
