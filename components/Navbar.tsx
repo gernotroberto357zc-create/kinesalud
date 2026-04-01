@@ -18,7 +18,7 @@ export const Navbar = () => {
         <div className="hidden md:flex items-center space-x-10 text-[13px] text-gray-500 font-medium tracking-tight">
           <a href="#servicios" className="hover:text-clinic-primary transition-colors duration-200">Tratamientos</a>
           <a href="#clinica" className="hover:text-clinic-primary transition-colors duration-200">La Clínica</a>
-          <a href="#contacto" className="hover:text-clinic-primary transition-colors duration-200">Contacto</a>
+          <a href="#contacto" className="hover:text-clinic-primary transition-colors duration-200">Contacto </a>
         </div>
 
         {/* Enlace a Doctoralia (limpio y sin doble botón) */}
