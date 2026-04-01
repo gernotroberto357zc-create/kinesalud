@@ -1,7 +1,7 @@
 "use client";
 
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 
 // Definimos la estructura de datos para TypeScript
 interface ServiceItem {
@@ -39,26 +39,32 @@ const services: ServiceItem[] = [
 ];
 
 export const Services = () => {
-  // Configuración del contenedor padre (coordina la cascada)
-  const containerVariants = {
+  // 2. Añade el tipo ": Variants" aquí
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.15, // Retraso entre tarjetas
+        staggerChildren: 0.15,
       },
     },
   };
 
-  // Configuración de cada tarjeta individual
-  const cardVariants = {
+  // 3. Añade el tipo ": Variants" aquí también
+  const cardVariants: Variants = {
     hidden: { opacity: 0, y: 30 },
     visible: { 
       opacity: 1, 
       y: 0, 
-      transition: { duration: 0.8, ease: [0.215, 0.61, 0.355, 1] } 
+      transition: { 
+        duration: 0.8, 
+        // Si usas números para una curva Bézier, TS ahora lo aceptará
+        ease: [0.215, 0.61, 0.355, 1] 
+      } 
     },
   };
+
+
 
   return (
     <section className="max-w-6xl mx-auto px-6 py-24">
