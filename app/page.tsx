@@ -30,14 +30,14 @@ export default function Home() {
               href="https://www.doctoralia.es/clinicas/kine-salud-2"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full sm:w-auto bg-clinic-primary text-white px-10 py-4 rounded-full font-semibold text-lg hover:bg-teal-700 transition-all shadow-lg shadow-teal-900/10 active:scale-95 text-center"
+              className="w-full sm:w-auto bg-clinic-primary !text-white px-10 py-4 rounded-full font-semibold text-lg hover:bg-teal-700 transition-all shadow-lg shadow-teal-900/10 active:scale-95 text-center flex items-center justify-center"
             >
               Solicitar Cita
             </a>
             
             <a 
               href="#servicios" 
-              className="group text-clinic-secondary font-semibold text-lg flex items-center gap-2 hover:text-clinic-primary transition-colors"
+              className="group !text-clinic-secondary font-semibold text-lg flex items-center gap-2 hover:!text-clinic-primary transition-colors cursor-pointer"
             >
               Nuestros Tratamientos
               <span className="transition-transform group-hover:translate-x-1">→</span>
