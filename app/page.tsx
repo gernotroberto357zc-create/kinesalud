@@ -1,24 +1,26 @@
 "use client";
 
-
+import { motion, Variants } from "framer-motion";
 import { Navbar } from "@/components/Navbar";
 import { Services } from "@/components/Services";
 import { Especialistas } from "@/components/Especialistas";
 import { Testimonials } from "@/components/Testimonials";
 import { LocationMap } from "@/components/LocationMap";
 import Footer from "@/components/Footer";
-import { motion, Variants } from "framer-motion";
 
 export default function Home() {
-  // 2. Añade ": Variants" aquí. Esto le dice a TS exactamente qué es este objeto.
+  // Definimos la variante con el tipo Variants para que TypeScript no se queje
   const revealVariant: Variants = {
-    hidden: { opacity: 0, y: 30 },
+    hidden: { 
+      opacity: 0, 
+      y: 30 
+    },
     visible: { 
       opacity: 1, 
       y: 0, 
       transition: { 
         duration: 0.8, 
-        ease: "easeOut" // Ahora TS ya sabe que este string es un "Easing" válido
+        ease: "easeOut" 
       } 
     }
   };
@@ -68,6 +70,7 @@ export default function Home() {
         </motion.div>
       </section>
 
+      {/* Secciones de la página */}
       <Services />
       <Especialistas />
       <Testimonials />
