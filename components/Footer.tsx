@@ -39,7 +39,7 @@ const Footer = () => {
           <div>
             <h4 className="text-xs font-bold uppercase tracking-widest text-gray-400 mb-4">Dónde estamos</h4>
             <p className="text-sm text-gray-600 mb-2">Calle de Serracines 2</p>
-            <p className="text-sm text-gray-600 mb-4">28806, Alcalá de Henares</p>
+            <p className="text-sm text-gray-600 mb-4">28806, Alcalá de Henares </p>
             <p className="text-sm font-semibold text-blue-600">+34 918 838 775</p>
           </div>
         </div>

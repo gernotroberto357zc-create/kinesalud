@@ -29,7 +29,7 @@ export default function Home() {
           className="max-w-5xl mx-auto text-center"
         >
           <span className="inline-block px-4 py-1.5 mb-6 text-xs font-bold tracking-[0.2em] uppercase bg-teal-50 text-clinic-primary rounded-full">
-            Centro de Fisioterapia Avanzada
+            Centro de Fisioterapia Avanzada 
           </span>
 
           <h1 className="text-6xl md:text-8xl font-bold tracking-tighter text-clinic-secondary mb-8 leading-tight">
@@ -62,7 +62,7 @@ export default function Home() {
     className="font-semibold text-lg flex items-center gap-2 transition-colors cursor-pointer"
     style={{ color: '#1f2937' }} // Gris muy oscuro casi negro
   >
-    Nuestros Tratamientos
+     Tratamientos
     <span>→</span>
   </a>
 </div>
