@@ -1,5 +1,6 @@
 // app/page.tsx
 import { Services } from "@/components/Services";
+import Footer from "@/components/Footer"; // 1. Importamos el nuevo componente
 
 export default function Home() {
   return (
@@ -33,7 +34,7 @@ export default function Home() {
       </section>
 
       {/* Bento Grid con fondo suave de clínica */}
-      <section id="servicios" className="bg-clinic-bg py-24 rounded-[48px] mx-4">
+      <section id="servicios" className="bg-clinic-bg py-24 rounded-[48px] mx-4 mb-12"> {/* Añadido mb-12 para separar del footer */}
         <div className="max-w-6xl mx-auto px-6">
           <div className="mb-16 flex flex-col md:flex-row md:items-end justify-between gap-6">
             <div>
@@ -49,12 +50,10 @@ export default function Home() {
           <Services />
         </div>
       </section>
-
-      <footer className="py-20 text-center">
-        <p className="text-clinic-muted text-sm tracking-wide">
-          © 2026 KINESALUD · CLÍNICA DE FISIOTERAPIA Y OSTEOPATÍA
-        </p>
-      </footer>
+      
+      {/* 2. Sustituimos el footer viejo por el componente profesional */}
+      <Footer />
+      
     </main>
   );
 }
