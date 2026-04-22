@@ -42,7 +42,7 @@ export default function Home() {
           </span>
 
           <h1 className="text-6xl md:text-8xl font-bold tracking-tighter text-slate-900 mb-8 leading-tight">
-            Tu bienestar BIENESTAR en <br />
+            Tu bienestar en <br />
             <span className="text-[#14b8a6] italic font-medium">manos expertas.</span>
           </h1>
 
