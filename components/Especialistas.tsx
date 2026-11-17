@@ -2,20 +2,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-const staff = [
-  {
-    nombre: "Daniel Díaz",
-    cargo: "Fisioterapeuta y Osteópata",
-    especialidad: "Osteopatía, Fisioterapia Deportiva y Punción Seca",
-    foto: "https://pixel-p2.s3.eu-central-1.amazonaws.com/doctor/3f087d/3f087da34be24097486e093206253456_large.jpg" 
-  },
-  {
-    nombre: "Edna Lizbeth Zárate",
-    cargo: "Fisioterapeuta",
-    especialidad: "Suelo Pélvico, Pilates Clínico y Drenaje Linfático",
-    foto: "/fisioLiz.jpg"
-  }
-];
+
 
 export const Especialistas = () => {
   return (
