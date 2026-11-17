@@ -3,13 +3,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-// Rellena aquí los datos del especialista que se queda en la clínica
 const especialista = {
-  nombre: "Nombre y Apellidos",
-  cargo: "Fisioterapeuta Colegiado · Director",
+  nombre: "Edna Zárate Cantoral",
+  cargo: "Fisioterapeuta Colegiada · Directora",
   especialidad:
-    "Especialista en fisioterapia avanzada, osteopatía y recuperación funcional personalizada para lesiones deportivas y dolor crónico.",
-  foto: "/ruta-de-la-foto.jpg", // Mantén la misma ruta de imagen que tenías en el array staff
+    "Especialista en fisioterapia avanzada, osteopatía y rehabilitación integral. Atención personalizada enfocada en la recuperación funcional, el alivio del dolor y el bienestar físico.",
+  foto: "/edna.jpg", // ⚠️ Comprueba que este nombre coincida con el archivo en tu carpeta /public
 };
 
 export const Especialistas = () => {
