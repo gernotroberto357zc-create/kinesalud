@@ -1,16 +1,25 @@
 "use client";
+
 import React from 'react';
 import { motion } from 'framer-motion';
 
-
+// Rellena aquí los datos del especialista que se queda en la clínica
+const especialista = {
+  nombre: "Nombre y Apellidos",
+  cargo: "Fisioterapeuta Colegiado · Director",
+  especialidad:
+    "Especialista en fisioterapia avanzada, osteopatía y recuperación funcional personalizada para lesiones deportivas y dolor crónico.",
+  foto: "/ruta-de-la-foto.jpg", // Mantén la misma ruta de imagen que tenías en el array staff
+};
 
 export const Especialistas = () => {
   return (
     <section className="max-w-6xl mx-auto px-6 py-24" id="equipo">
-      <div className="mb-16 text-center md:text-left">
-        <motion.span 
+      <div className="mb-14 text-center md:text-left">
+        <motion.span
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
           className="text-[#14b8a6] font-bold text-xs uppercase tracking-[0.2em] mb-4 block"
         >
           Nuestro Equipo Profesional
@@ -20,31 +29,35 @@ export const Especialistas = () => {
         </h2>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-12 max-w-4xl">
-        {staff.map((persona, index) => (
-          <motion.div
-            key={index}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: index * 0.2 }}
-            className="group cursor-pointer"
-          >
-            <div className="relative aspect-[4/5] overflow-hidden rounded-[40px] bg-gray-100 mb-6 shadow-sm group-hover:shadow-2xl transition-all duration-500">
-              <img
-                src={persona.foto}
-                alt={persona.nombre}
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-              />
-            </div>
-            <div className="px-2">
-              <p className="text-[#14b8a6] font-bold text-xs uppercase tracking-wider mb-1">{persona.cargo}</p>
-              <h3 className="text-2xl font-bold text-slate-900 mb-2 group-hover:text-[#14b8a6] transition-colors">{persona.nombre}</h3>
-              <p className="text-slate-500 text-sm leading-relaxed">{persona.especialidad}</p>
-            </div>
-          </motion.div>
-        ))}
-      </div>
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+        className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-center bg-[#F5F5F7] p-6 sm:p-10 rounded-[40px] border border-slate-200/70 max-w-4xl"
+      >
+        <div className="md:col-span-5">
+          <div className="relative aspect-[4/5] overflow-hidden rounded-[32px] bg-gray-200 shadow-md">
+            <img
+              src={especialista.foto}
+              alt={especialista.nombre}
+              className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+            />
+          </div>
+        </div>
+
+        <div className="md:col-span-7 px-2">
+          <p className="text-[#14b8a6] font-bold text-xs uppercase tracking-wider mb-2">
+            {especialista.cargo}
+          </p>
+          <h3 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+            {especialista.nombre}
+          </h3>
+          <p className="text-slate-600 text-base md:text-lg leading-relaxed">
+            {especialista.especialidad}
+          </p>
+        </div>
+      </motion.div>
     </section>
   );
 };
