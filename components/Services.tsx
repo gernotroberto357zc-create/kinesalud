@@ -43,7 +43,7 @@ const services: ServiceItem[] = [
 ];
 
 // Sustituye por el número real de la clínica (con prefijo 34, sin + ni espacios)
-const WHATSAPP_NUMBER = "34600000000";
+const WHATSAPP_NUMBER = "34608765492";
 
 export const Services = () => {
   const containerVariants: Variants = {
